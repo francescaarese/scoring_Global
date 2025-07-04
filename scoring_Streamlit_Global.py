@@ -381,7 +381,7 @@ if st.button("Process Data"):
         st.download_button(
             label="Download Updated Data",
             data=output,
-            file_name="FFNY_scoring.xlsx",
+            file_name="Global_scoring.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         )
     else:
