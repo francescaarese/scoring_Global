@@ -46,10 +46,10 @@ uploaded_file = st.file_uploader("Upload Company Data Excel File", type=["xlsx"]
 # Sidebar for weight adjustments
 st.sidebar.header("Adjust Weights")
 weights = {
-    'VC Score': st.sidebar.slider("VC Score Weight", 0.0, 1.0, 0.15, 0.01),
-    'Funding Valuation Score': st.sidebar.slider("Funding Valuation Score Weight", 0.0, 1.0, 0.3, 0.01),
+    'VC Score': st.sidebar.slider("VC Score Weight", 0.0, 1.0, 0.2, 0.01),
+    'Funding Valuation Score': st.sidebar.slider("Funding Valuation Score Weight", 0.0, 1.0, 0.2, 0.01),
     'Raised Score': st.sidebar.slider("Raised Score Weight", 0.0, 1.0, 0.2, 0.01),
-    'Recent Financing Score': st.sidebar.slider("Recent Financing Score Weight", 0.0, 1.0, 0.1, 0.01),
+    'Recent Financing Score': st.sidebar.slider("Recent Financing Score Weight", 0.0, 1.0, 0.2, 0.01),
     # 'HQ Location Score': st.sidebar.slider("HQ Location Score Weight", 0.0, 1.0, 0.05, 0.01),
     'Company Growth Score': st.sidebar.slider("Company Growth Score Weight", 0.0, 1.0, 0.1, 0.01),
     'Emerging and Verticals Score': st.sidebar.slider("Emerging and Verticals Score Weight", 0.0, 1.0, 0.1, 0.01)
@@ -243,9 +243,10 @@ def score_emerging_and_verticals(company):
             'space technology',
             'life sciences',
             'nanotechnology',
-            'quantum computing'
-            'autonomous cars'
-            'fusion energy'
+            'quantum computing',
+            'autonomous cars',
+            'fusion energy',
+            'climate tech'
         }
         # Check if any target keyword is present in the verticals
         verticals_score = any(keyword in verticals for keyword in target_keywords)
